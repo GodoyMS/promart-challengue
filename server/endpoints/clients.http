@@ -1,0 +1,57 @@
+@baseUrl = http://localhost:5000/api
+
+
+
+### CREAR UN CLIENTE
+POST {{baseUrl}}/clients/create
+Content-Type: application/json
+Accept: application/json
+
+{
+	"name":"Client 1",
+	"motherSurname":"Surname mother 1",
+	"fatherSurname":"Surname father 1",
+	"email":"test1@gmail.com",
+	"bornDate":"1997-09-05"
+}
+
+
+
+### ACTUALIZAR UN CLIENTE
+PUT {{baseUrl}}/clients/update-info/669eebfc02a7a28abb70cc06
+Content-Type: application/json
+Accept: application/json
+
+{
+	"name":"Client 1 updated",
+   "email":"test1updated@gmail.com",
+}
+
+
+### ELIMINAR UN CLIENTE SIN ELIMINARLO EN LA BASE DE DATOS
+DELETE {{baseUrl}}/clients/delete/669eebfc02a7a28abb70cc06
+Content-Type: application/json
+Accept: application/json
+
+
+
+
+### ACTUALIZAR ESTADO DE UN CLIENTE CON LAS TRANSICIONES DE ESTADO VÁLIDAS
+PUT {{baseUrl}}/clients/update-state/669eebfc02a7a28abb70cc06
+Content-Type: application/json
+Accept: application/json
+
+{
+	"state":"Activo"
+}
+
+
+
+
+### OBTENER CLINTES POR LÍMITE Y PAGINACION
+GET {{baseUrl}}/clients/read?page=1&limit=5
+Content-Type: application/json
+Accept: application/json
+
+
+
