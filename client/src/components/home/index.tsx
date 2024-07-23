@@ -35,6 +35,8 @@ const DataTable = ({
       <TableCaption>Clientes registrados</TableCaption>
       <TableHeader>
         <TableRow>
+        <TableHead className="">Id</TableHead>
+
           <TableHead className="">Nombre</TableHead>
           <TableHead>Apellido Paterno</TableHead>
           <TableHead>Apellido Materno</TableHead>
@@ -47,6 +49,8 @@ const DataTable = ({
       <TableBody>
         {data.docs.map((client) => (
           <TableRow key={client._id}>
+                        <TableCell className="font-medium">{client._id}</TableCell>
+
             <TableCell className="font-medium">{client.name}</TableCell>
             <TableCell>{client.fatherSurname}</TableCell>
             <TableCell>{client?.motherSurname}</TableCell>
@@ -74,7 +78,7 @@ const DataTable = ({
       </TableBody>
       <TableFooter>
         <TableRow>
-          <TableCell colSpan={6}>Total {data.total}</TableCell>
+          <TableCell colSpan={7}>Total {data.total}</TableCell>
           <TableCell className="text-right">
             <Button
               onClick={() =>
