@@ -58,7 +58,7 @@ const DataTable = ({
             <TableCell>{client?.state}</TableCell>
             <TableCell>{ differenceInYears(new Date().toISOString(),client?.bornDate)} años</TableCell>
 
-            <TableCell className=" text-right">
+            <TableCell className=" text-right flex justify-end items-center gap-2 flex-nowrap">
               <Button onClick={()=>onSelectUpdate(client)} className=" mr-2">
                 Editar <Edit2Icon />
               </Button>
