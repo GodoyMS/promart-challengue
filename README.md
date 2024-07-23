@@ -19,9 +19,10 @@ Instalar todas las dependecias
 ### Crear un archivo .env
 Guiarse del archivo .env.example
 Por lo general, puede lucir asi
-`DATABASE_URL=mongodb://127.0.0.1:27017/challengue-promart
-CLIENT_URL=http://localhost:3000
-PORT=5000`
+
+`DATABASE_URL=mongodb://127.0.0.1:27017/challengue-promart`
+`CLIENT_URL=http://localhost:3000`
+`PORT=5000`
 
 ### `yarn run dev`
 Correr el proyecto localmente
