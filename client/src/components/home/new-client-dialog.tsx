@@ -100,11 +100,11 @@ const NewClientDialog = ({ onSuccess, open, setOpen }: INewClientDialog) => {
                 id="name"
                 type="text"
                 required
-                value={formInput.motherSurname}
+                value={formInput.fatherSurname}
                 onChange={(e) =>
                   setFormInput((prev) => ({
                     ...prev,
-                    motherSurname: e.target.value,
+                    fatherSurname: e.target.value,
                   }))
                 }
               />
@@ -114,11 +114,11 @@ const NewClientDialog = ({ onSuccess, open, setOpen }: INewClientDialog) => {
               <Input
                 id="name"
                 type="text"
-                value={formInput.fatherSurname}
+                value={formInput.motherSurname}
                 onChange={(e) =>
                   setFormInput((prev) => ({
                     ...prev,
-                    fatherSurname: e.target.value,
+                    motherSurname: e.target.value,
                   }))
                 }
               />
