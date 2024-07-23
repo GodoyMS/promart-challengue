@@ -1,0 +1,1 @@
+{"version":3,"file":"configLogs.js","sourceRoot":"","sources":["../../src/configs/configLogs.ts"],"names":[],"mappings":";;;;;;AAAA,oDAA4B;AAE5B,MAAM,YAAY;IACR,YAAY,CAAC,IAAY;QAC7B,OAAO,gBAAM,CAAC,YAAY,CAAC,EAAE,IAAI,EAAE,KAAK,EAAE,OAAO,EAAE,CAAC,CAAC;IACxD,CAAC;CACH;AAEY,QAAA,MAAM,GAAiB,IAAI,YAAY,EAAE,CAAC"}

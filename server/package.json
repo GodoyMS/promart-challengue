@@ -2,11 +2,12 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/src/app.js",
-    "dev": "nodemon -r tsconfig-paths/register src/app.ts /Q | ./node_modules/.bin/bunyan "
+    "dev": "nodemon -r tsconfig-paths/register src/app.ts /Q | ./node_modules/.bin/bunyan ",
+    "build": "ttsc -p . "
   },
   "keywords": [],
   "author": "",

@@ -35,14 +35,13 @@
    },
    "exclude": [
       "node_modules",
-      "**/*.d.ts"  // Exclude all declaration files
+      "**/*.d.ts"
     ],
    "include": [
      "src/**/*.ts",
      "src/**/*.ejs",
-
      "test/**/*.ts"
 
 
-   ] /* te permite incluir en el proceso de compilación tu directorio de trabajo donde tienes tus .ts */
+   ]
  }
