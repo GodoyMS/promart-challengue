@@ -1,6 +1,7 @@
 import { CLIENTSTATUS, IClientDocument } from '@client/interfaces/clientDocument.interface';
 import { IClientUpdate } from '@client/interfaces/updateData.interface';
 import { ClientModel } from '@client/models/client.schema';
+import mongoose from 'mongoose';
 
 interface ProductQuery {
    $or?: Array<{ sku?: string; name?: string }>;
@@ -32,16 +33,29 @@ class ClientsDbService {
    public async getAllClients({
       skip,
       limit,
-   }: {
+      id
+    }: {
       skip: number;
       limit: number;
-   }): Promise<{ docs: IClientDocument[]; total: number }> {
+      id?: string;
+    }): Promise<{ docs: IClientDocument[]; total: number }> {
+      let query: { active: boolean; _id?: mongoose.Types.ObjectId } = { active: true };
+
+      if (id) {
+        if (mongoose.Types.ObjectId.isValid(id)) {
+          query._id = new mongoose.Types.ObjectId(id);
+        } else {
+          // Return empty result if the id is not valid
+          return { docs: [], total: 0 };
+        }
+      }
+
       const [docs, total] = await Promise.all([
-         ClientModel.find({ active: true }).skip(skip).limit(limit).exec(),
-         ClientModel.countDocuments({active:true}),
+        ClientModel.find(query).skip(skip).limit(limit).exec(),
+        ClientModel.countDocuments(query),
       ]);
       return { docs, total };
-   }
+    }
 
    public async deleteClientById(id: string): Promise<IClientDocument | null> {
       const client: IClientDocument | undefined =

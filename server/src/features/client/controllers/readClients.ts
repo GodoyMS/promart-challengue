@@ -5,11 +5,13 @@ export class ReadClient  {
    public async read(req: Request, res: Response): Promise<void> {
       const page: number = parseInt(req.query.page as string, 10) || 1;
       const limit: number = parseInt(req.query.limit as string, 10) || 15;
+      const id:string = req.query.id as string
       const skip = (page - 1) * limit;
 
       const { docs, total } = await clientsDbService.getAllClients({
          skip,
          limit,
+         id:id ? id: undefined
       });
       const totalPages = Math.ceil(total / limit);
       const hasNextPage = page < totalPages;

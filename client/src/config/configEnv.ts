@@ -1,0 +1,1 @@
+export const SERVER_BASE_PATH=process.env.REACT_APP_API_URL;

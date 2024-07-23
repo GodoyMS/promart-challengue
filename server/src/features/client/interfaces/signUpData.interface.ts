@@ -10,4 +10,13 @@ export interface ISignUpClient {
    motherSurname?:string;
    email:number;
    bornDate:Date;
+
 }
+
+
+export enum CLIENTSTATUS {
+   PROSPECTO= 'Prospecto',
+   ACTIVO = 'Activo',
+   INACTIVO = 'Inactivo',
+   BLOQUEADO = 'Bloqueado'
+ }
