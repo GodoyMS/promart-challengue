@@ -38,7 +38,7 @@ const signUpClientSchemeValidation: ObjectSchema = Joi.object().keys({
       'string.min': 'Invalid Father Surname',
       'string.max': 'Invalid Father Surname',
    }),
-   motherSurname: Joi.string().empty().optional().max(50).messages({
+   motherSurname: Joi.string().allow('').optional().max(50).messages({
       'string.min': 'Invalid Mother Surname',
       'string.max': 'Invalid Mother Surname',
    }),
