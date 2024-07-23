@@ -8,7 +8,7 @@ Proyecto realizado usando Create React App y Nodejs
 
 
 
-## Scripts para ejecución para servidor
+## Scripts para ejecución del servidor
 
 ### `cd server`
 Ubicarse en el directorio principal e instalar todas las dependecias
@@ -30,7 +30,7 @@ Correr el proyecto localmente
 `endpoints/clients.http`
 
 
-## Scripts para ejecución para servidor
+## Scripts para ejecución de Cliente
 
 ### `cd client`
 Ubicarse en el directorio principal e instalar todas las dependecias
